@@ -32,7 +32,6 @@ public class Product {
         BeanUtils.copyProperties(this, inventoryChanged);
         inventoryChanged.publishAfterCommit();
 
-
         OutOfStock outOfStock = new OutOfStock();
         BeanUtils.copyProperties(this, outOfStock);
         outOfStock.publishAfterCommit();
