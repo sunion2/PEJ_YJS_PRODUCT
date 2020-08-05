@@ -1,0 +1,16 @@
+PEJ\Shipped.class
+PEJ\OutOfStock.class
+PEJ\ProductController.class
+PEJ\ProductReceived.class
+PEJ\config\kafka\KafkaProcessor.class
+PEJ\PolicyHandler.class
+PEJ\ProductRepository.class
+PEJ\AbstractEvent$1.class
+PEJ\Product.class
+PEJ\Purchased.class
+PEJ\SetOnePlused.class
+PEJ\AbstractEvent.class
+PEJ\ProductApplication.class
+PEJ\InventoryChanged.class
+PEJ\Cancelled.class
+PEJ\PrdAttrCdChanged.class
