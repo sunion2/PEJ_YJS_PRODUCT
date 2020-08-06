@@ -20,6 +20,12 @@ import java.util.Optional;
    System.out.println("###cancelDelivery_0" + product.getPrdId());
    System.out.println("###cancelDelivery_0" + product.getPrdAttrCd());
 
+   try {
+    Thread.currentThread().sleep((long) (400 + Math.random() * 220));
+   } catch (InterruptedException e) {
+    e.printStackTrace();
+   }
+
    Optional<Product> productOptional = productRepository.findAllByPrdIdLike(product.getPrdId());
 
    Product productAttrCd = productOptional.get();
