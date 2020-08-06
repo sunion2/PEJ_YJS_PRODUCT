@@ -26,13 +26,13 @@ import java.util.Optional;
     e.printStackTrace();
    }
 
-   Optional<Product> productOptional = productRepository.findAllByPrdIdLike(product.getPrdId());
+//   Optional<Product> productOptional = productRepository.findAllByPrdIdLike(product.getPrdId());
+//   Product productAttrCd = productOptional.get();
+//   productAttrCd.setPrdAttrCd("");
 
-   Product productAttrCd = productOptional.get();
-
-   productAttrCd.setPrdAttrCd("");
-
-   productRepository.save(product);
+   Product onePlusCancelled = productRepository.findByPrdId(product.getPrdId());
+   onePlusCancelled.setPrdAttrCd("CANCELLED");
+   productRepository.save(onePlusCancelled);
 
   }
  }

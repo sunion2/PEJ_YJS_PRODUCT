@@ -10,5 +10,6 @@ public interface ProductRepository extends PagingAndSortingRepository<Product, L
 
         //@Query("select p.prdId,p.prdQty from Product p where p.prdId = ?1")
         //Optional<Product> findAllByPrdId(String prdId);
+        Product findByPrdId(String prdId);
         Optional<Product> findAllByPrdIdLike(String prdId);
 }
