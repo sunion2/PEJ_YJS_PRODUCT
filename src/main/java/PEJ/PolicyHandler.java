@@ -116,10 +116,11 @@ public class PolicyHandler{
 
             Optional<Product> productOptional = productRepository.findAllByPrdIdLike(setOnePlused.getPrdId());
 
-            Product product = productOptional.get();
-
-            product.setPrdAttrCd(setOnePlused.getPrdAttrCd());
-            productRepository.save(product);
+            if( productOptional.isPresent() ) {
+                Product product = productOptional.get();
+                product.setPrdAttrCd(setOnePlused.getPrdAttrCd());
+                productRepository.save(product);
+            }
 
         }
     }
